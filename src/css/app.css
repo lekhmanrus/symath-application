@@ -1,0 +1,200 @@
+/*#main-menu {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 30px;
+  list-style: none;
+  font-size: 18pt;
+  display: inline-block;
+}
+#main-menu > li {
+  background-color: rgba(224, 224, 224, 0.1);
+  margin: 3px;
+  border-right: 3px solid #428bca;
+}
+#main-menu > li:hover {
+  border-right-color: #75b6ef;
+}
+#main-menu > li > a {
+  padding: 8px 15px 1px 15px;
+  display:inline-block;
+  text-decoration: none;
+  color: black;
+}
+#main-menu > li > a:hover {
+  text-decoration: none;
+  color: #428bca;
+}*/
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before {
+  width: 25px;
+  height: 25px;
+  left: 0;
+  margin-top: -11px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"] {
+  opacity: 0;
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 100;
+}
+
+.ac-custom label::before {
+  content: '';
+  border: 3px solid rgb(60, 60, 60);
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.ac-radio label::before {
+  border-radius: 50%;
+  margin-top: -4px;
+}
+
+.ac-radio li {
+  list-style: none;
+  padding: 5px;
+}
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+  color: #0088CC
+  cursor: pointer !important;
+} 
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before {
+  opacity: 0.8;
+}
+
+.ac-custom svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 0px;
+  left: 3px;
+  pointer-events: none;
+}
+
+.ac-custom svg path {
+  stroke: #0088CC;
+  stroke-width: 11px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.ac-circle svg {
+  width: 35px;
+  height: 35px;
+  margin-top: -9px;
+  left: -5px;
+}
+
+.ac-circle svg path {
+  stroke-width: 3px;
+} 
+
+.ac-boxfill svg path {
+  stroke-width: 4px;
+} 
+
+.ac-swirl svg path {
+  stroke-width: 4px;
+}
+
+.ac-list svg path {
+  stroke-width: 2px;
+}
+
+.cbp-vimenu {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 999999999;
+}
+
+.cbp-vimenu li a {
+  display: block;
+  text-indent: -500em;
+  height: 96px;
+  width: 96px;
+  line-height: 96px;
+  text-align: center;
+  color: rgb(60, 60, 60);
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  -webkit-transition: background 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.cbp-vimenu li:hover/*,
+.cbp-vimenu li:first-child a*/ {
+  background: #0088CC;
+}
+
+.cbp-vimenu li a:hover/*,
+.cbp-vimenu li:first-child a*/ {
+  color: #FFFFFF;
+}
+
+.cbp-vimenu li.cbp-vicurrent {
+  background: #FFFFFF;
+  border-right: 5px solid #0088CC;
+}
+
+.cbp-vimenu li.cbp-vicurrent a {
+  color: #0088CC;
+}
+
+.cbp-vimenu li a:before {
+  speak: none;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 35px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.symath-logo {
+  width: 101px;
+  height: 96px;
+  background-image: linear-gradient(to bottom, rgb(60, 60, 60) 0%, rgb(34, 34, 34) 100%);
+  background-repeat: repeat-x;
+  background-color: rgb(34, 34, 34);
+  border-color: rgb(8, 8, 8);
+  margin-bottom: -1px;
+  border: 1px solid transparent;
+}
+
+.symath-logo a {
+  background-image: url(../images/logo.png);
+  width: 96px;
+  height: 96px;
+}
+
+.my-container {
+  margin-left: 101px;
+}
+
+.my-line {
+  height: 96px;
+}
+
+.hint, [data-hint] {
+  position: fixed;
+}

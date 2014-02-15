@@ -6,10 +6,78 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/hint.css" />
     <link rel="stylesheet" type="text/css" href="css/app.css" />
   </head>
-  <body ng-controller="indexCtrl">
-    Angular + Bootstrap
+  <body ng-controller="indexCtrl" scroll-spy>
+
+    <ul class="cbp-vimenu" ui-floating-menu>
+      <li class="symath-logo"><a href="index.html">Home</a></li>
+      <li spy="input" class="hint--right" data-hint="Input"><a href="#input" class="glyphicon glyphicon-pencil">Input</a></li>
+      <li spy="options" class="hint--right" data-hint="Options"><a href="#options" class="glyphicon glyphicon-cog">Options</a></li>
+      <li spy="output" class="hint--right" data-hint="Output"><a href="#output" class="glyphicon glyphicon-eye-open">Output</a></li>
+      <li spy="documentation" class="hint--right" data-hint="Documentation"><a href="#documentation" class="glyphicon glyphicon-question-sign">Documentation</a></li>
+    </ul>
+
+    <div class="navbar navbar-inverse my-line" role="navigation">
+      <div class="container">
+      </div>
+    </div>
+
+    <div class="container my-container">
+      <div class="col-md-9" id="input">
+        <h2>Input</h2>
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+      <div class="col-md-3">
+        <form class="ac-custom ac-radio ac-fill" autocomplete="off">
+          <h2>Mode</h2>
+          <ul>
+            <li><input id="r2" name="r1" type="radio"><label for="r2">factorized</label></li>
+            <li><input id="r3" name="r1" type="radio"><label for="r3">expanced</label></li>
+          </ul>
+        </form>
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <h2 id="options">Options</h2>
+      <div class="well well-sm">
+        OPTIONAL additional settings<br />
+        OPTIONAL additional settings<br />
+        OPTIONAL additional settings<br />
+        OPTIONAL additional settings<br />
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <h2 id="output">Output</h2>
+      <div class="jumbotron">
+        <p>{answer there}</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Save as...</a></p>
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <h2 id="documentation">Documentation</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Question</h2>
+          <p>Answer </p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div>
+      </div>
+      <hr>
+      <footer>
+        <p>© SyMath 2014</p>
+      </footer>
+    </div>
   </body>
   <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
   <script type="text/javascript" src="lib/angular/angular.js"></script>
@@ -20,4 +88,5 @@
   <script type="text/javascript" src="js/directives.js"></script>
   <script type="text/javascript" src="js/filters.js"></script>
   <script type="text/javascript" src="js/services.js"></script>
+  <script type="text/javascript" src="lib/svgcheckbx.js"></script>
 </html>
