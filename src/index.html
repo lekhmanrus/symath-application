@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/hint.css" />
     <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <script type="text/javascript" src="lib/MathJax/MathJax.js?config=AM_HTMLorMML-full"></script>
   </head>
   <body ng-controller="indexCtrl" scroll-spy>
 
@@ -27,7 +28,7 @@
     <div class="container my-container">
       <div class="col-md-9" id="input">
         <h2>Input</h2>
-        <textarea class="form-control" rows="3"></textarea>
+        <textarea class="form-control" rows="3" ui-math-jax="inpMathJax"></textarea>
       </div>
       <div class="col-md-3">
         <form class="ac-custom ac-radio ac-fill" autocomplete="off">
@@ -37,6 +38,12 @@
             <li><input id="r3" name="r1" type="radio"><label for="r3">expanced</label></li>
           </ul>
         </form>
+      </div>
+      <div class="clearfix"></div>
+      <br />
+      <div class="well well-sm">
+        <h3>Inputed data</h3>
+        <span id="inpMathJax"></span>
       </div>
       <div class="clearfix"></div>
       <hr>
