@@ -1,0 +1,22 @@
+{
+  "main": "index.html",
+  "name": "SyMath",
+  "description": "UI for libsymath-js based on node-webkit",
+  "version": "0.1.0",
+  "keywords": [ "symath-application", "libsymath-js", "node-webkit" ],
+  "window": {
+    "title": "SyMath",
+    "icon": "favicon.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "center"
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "dependencies": {
+    "deck":"latest"
+  }
+}
