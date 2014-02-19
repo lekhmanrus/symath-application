@@ -1,4 +1,21 @@
 'use strict';
+grunt.loadNpmTasks('grunt-node-webkit-builder');
+grunt.registerTask('default', ['nodewebkit']);
+grunt.initConfig({
+  nodewebkit: {
+    options: {
+        build_dir: './build',
+        mac_icns: './src/favicon.icns',
+        mac: true,
+        win: true,
+        linux32: true,
+        linux64: true
+    },
+    src: ['./src/**/*']
+}});
+/*
+grunt.loadNpmTasks('grunt-node-webkit-builder');
+grunt.registerTask('default', ['nodewebkit']);
 
 module.exports = function(grunt) {
 
@@ -11,24 +28,8 @@ module.exports = function(grunt) {
         build_dir: './build',
         mac_icns: './src/favicon.icns'
       },
-      src: './src/**/*'
+      src: './src/***'
     },
 
   });
-
-  grunt.loadTasks('tasks');
-
-  // These plugins provide necessary tasks.
-  //grunt.loadNpmTasks('grunt-contrib-jshint');
-  //grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-release');
-  //grunt.loadNpmTasks('grunt-contrib-nodeunit');
-
-  // Whenever the "test" task is run, first clean the "tmp" dir, then run this
-  // plugin's task(s), then test the result.
-  //grunt.registerTask('test', ['clean', 'nodeunit']);
-
-  // By default, lint and run all tests.
-  //grunt.registerTask('default', ['jshint', 'test']);
-
-};
+};*/

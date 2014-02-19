@@ -11,6 +11,10 @@
     {
       "name": "Denys Zariaiev",
       "email": "denys.zariaiev@gmail.com"
+    },
+    {
+      "name": "Ruslan Lekhman",
+      "email": "lekhman-ruslan@i.ua"
     }
   ],
   "repository": {
@@ -30,26 +34,7 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-release": "~0.6.0"
-  },
-  "peerDependencies": {
-    "grunt": "~0.4.2"
-  },
-  "keywords": [
-    "gruntplugin"
-  ],
   "dependencies": {
-    "request": "~2.33.0",
-    "unzip": "~0.1.9",
-    "async": "~0.2.9",
-    "tar": "~0.1.19",
-    "lazystream": "~0.1.0",
-    "archiver": "~0.5.2",
-    "zip": "~1.1.1",
-    "plist": "~0.4.3",
-    "q": "~1.0.0",
-    "lodash": "~2.4.1"
+    "grunt-node-webkit-builder": "*"
   }
 }
