@@ -9,8 +9,8 @@
     "icon": "favicon.png",
     "toolbar": false,
     "frame": true,
-    "width": 800,
-    "height": 500,
+    "width": 855,
+    "height": 855,
     "position": "center"
   },
   "webkit": {

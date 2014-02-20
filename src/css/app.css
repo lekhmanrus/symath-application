@@ -101,14 +101,13 @@ span.symath-logo {
 }
 
 .my-container {
-  margin-top: 96px;
   margin-left: 50px;
 }
 
 .cbp-vimenu {
   position: fixed;
   overflow: hidden;
-  top: 96px;
+  top: 97px;
   left: 0;
   height: 100%;
   list-style-type: none;
@@ -152,4 +151,9 @@ span.symath-logo {
   height: 100%;
   font-size: 1.4em;
   -webkit-font-smoothing: antialiased;
+}
+
+.hint, [data-hint] {
+  position: fixed;
+  z-index: 999999999999 !important;
 }

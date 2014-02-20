@@ -19,7 +19,37 @@
       </div>
     </div>
 
-    <div ng-view></div>
+    <ul class="cbp-vimenu" ui-floating-menu>
+  <li class="hint--right" data-hint="Save as..."><a href="#" class="glyphicon glyphicon-floppy-disk">Save as...</a></li>
+  <li class="hint--right" data-hint="Clear"><a href="#" class="glyphicon glyphicon-trash">Clear</a></li>
+  <li class="hint--right" data-hint="Documentation"><a href="#docs" target="_blank" class="glyphicon glyphicon-question-sign">Documentation</a></li>
+  <li class="hint--right" data-hint="About"><a href="#about" target="_blank" class="glyphicon glyphicon-info-sign">About</a></li>
+</ul>
+<div class="container my-container">
+  <div class="col-sm-9">
+    <h2>Input</h2>
+    <textarea class="form-control" rows="3" ui-math-jax="inpMathJax"></textarea>
+  </div>
+  <div class="col-sm-3">
+    <form class="ac-custom ac-radio ac-fill" autocomplete="off">
+      <h2>Mode</h2>
+      <ul>
+        <li><input id="r2" name="r1" type="radio"><label for="r2">factorized</label></li>
+        <li><input id="r3" name="r1" type="radio"><label for="r3">expanced</label></li>
+      </ul>
+    </form>
+  </div>
+  <div class="clearfix"></div>
+  <br />
+  <div class="well well-sm">
+    <span id="inpMathJax"></span>
+  </div>
+  <div class="clearfix"></div>
+  <h2>Output</h2>
+  <div class="jumbotron">
+    <p>{answer there}</p>
+  </div>
+</div>
     <!--<ul class="cbp-vimenu" ui-floating-menu>
       <li class="hint--right" data-hint="Save as..."><a href="#" class="glyphicon glyphicon-floppy-disk">Save as...</a></li>
       <li class="hint--right" data-hint="Clear"><a href="#" class="glyphicon glyphicon-trash">Clear</a></li>
