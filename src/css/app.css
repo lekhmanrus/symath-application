@@ -100,60 +100,79 @@ span.symath-logo {
   height: 96px;
 }
 
+span.symath-logo:hover {
+  background-color: #0088CC;
+}
+
 .my-container {
-  margin-left: 50px;
+  margin-top: 96px;
 }
 
-.cbp-vimenu {
-  position: fixed;
-  overflow: hidden;
-  top: 97px;
-  left: 0;
-  height: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background: #f7f7f7;
+.my-line {
+  
 }
- 
-.cbp-vimenu li a {
-  display: block;
-  text-indent: -500em;
-  height: 50px;
+
+.my-menu li {
+  margin-top: 10px;
+}
+
+.my-menu li:not(:first-child) {
+  border-left: 1px solid rgba(43, 43, 43, .25);
+}
+
+.my-menu li a span {
+  font-size: 43px;
+  padding-top: 25px;
+}
+
+.modal-backdrop.am-fade {
+  opacity: .5;
+  transition: opacity .15s linear;
+  &.ng-enter {
+    opacity: 0;
+    &.ng-enter-active {
+      opacity: .5;
+    }
+  }
+  &.ng-leave {
+    opacity: .5;
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+
+.modal {
+  overflow-x: none;
+  overflow-y: auto;
+  &.center {
+    .modal-dialog {
+      position: fixed;
+      /*top: 40%;
+      left: 50%;
+      min-width: 100px;
+      width: 50%;
+      transform: translateX(-50%) translateY(-50%);*/
+    }
+  }
+}
+/*.my-menu {
+  position: fixed;
+  left: 0px;
+  top: 96px;
+  list-style: none;
   width: 50px;
-  line-height: 50px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.my-menu li {
+  width: 50px;
+  height: 50px;
+}
+
+.my-menu li a {
+  width: 50px;
+  height: 50px;
   text-align: center;
-  color: #999;
-  position: relative;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  -webkit-transition: background 0.1s ease-in-out;
-  -moz-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
-}
- 
-.cbp-vimenu li a:hover {
-  background: #47a3da;
-  color: #fff;
-}
-
-.cbp-vimenu li.cbp-vicurrent a {
-  background: #fff;
-  color: #47a3da;
-}
- 
-.cbp-vimenu li a:before {
-  speak: none;
-  text-indent: 0em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 1.4em;
-  -webkit-font-smoothing: antialiased;
-}
-
-.hint, [data-hint] {
-  position: fixed;
-  z-index: 999999999999 !important;
-}
+}*/
