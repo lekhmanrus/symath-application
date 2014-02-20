@@ -7,9 +7,9 @@ module.exports = function(grunt) {
       options: {
         build_dir: './build',
         mac_icns: './src/favicon.icns',
-        mac: false,
-        win: false,
-        linux32: false,
+        mac: true,
+        win: true,
+        linux32: true,
         linux64: true
       },
       src: ['./src/**/*']

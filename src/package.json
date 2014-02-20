@@ -7,18 +7,12 @@
   "window": {
     "title": "SyMath",
     "icon": "favicon.png",
-    "toolbar": false,
+    "toolbar": true,
     "frame": true,
-    "min_width": 725,
+    "min_width": 771,
     "min_height": 255,
     "width": 855,
     "height": 855,
     "position": "center"
-  },
-  "webkit": {
-    "plugin": true
-  },
-  "dependencies": {
-    "deck":"latest"
   }
 }

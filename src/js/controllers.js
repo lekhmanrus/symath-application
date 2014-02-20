@@ -5,7 +5,17 @@ angular.module('symathApp.controllers', [])
 
     $scope.docs = function() {
       $scope.title = 'dsad';
-      $scope.content = 'UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit UI for libsymath-js based on node-webkit';
+      $scope.items = [
+                        {index: 0, title: 'some', content: 'tra'},
+                        {index: 1, title: '11111', content: '1111111111111111111111111'},
+                        {index: 2, title: '2', content: '222'}
+                    ];
+      $scope.current = 0;
+      $scope.content = $scope.items[$scope.current].content;
+      $scope.show = function(id) {
+        $scope.current = id;
+        $scope.content = $scope.items[id].content;
+      };
       var docsModal = $modal({scope: $scope, template: 'partials/modal/docs.tpl.html', animation: 'scale-fade', position: 'center'});
     };
 
