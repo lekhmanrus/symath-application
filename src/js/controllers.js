@@ -4,7 +4,7 @@ angular.module('symathApp.controllers', [])
   .controller('indexCtrl', ['$scope', '$modal', function($scope, $modal) {
 
     $scope.docs = function() {
-      $scope.title = 'dsad';
+      $scope.title = 'Documentation';
       $scope.items = [
                         {index: 0, title: 'some', content: 'tra'},
                         {index: 1, title: '11111', content: '1111111111111111111111111'},
@@ -20,8 +20,6 @@ angular.module('symathApp.controllers', [])
     };
 
     $scope.about = function() {
-      $scope.title = 'About';
-      $scope.content = 'UI for libsymath-js based on node-webkit.';
       var docsModal = $modal({scope: $scope, template: 'partials/modal/about.tpl.html', animation: 'scale-fade', position: 'center'});
     };
 
