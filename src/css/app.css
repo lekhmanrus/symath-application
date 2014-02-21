@@ -1,10 +1,10 @@
 .ac-custom input[type="checkbox"],
 .ac-custom input[type="radio"],
 .ac-custom label::before {
-  width: 25px;
-  height: 25px;
+  width: 21px;
+  height: 21px;
   left: 0;
-  margin-top: -11px;
+  margin-top: -10px;
   position: absolute;
   cursor: pointer;
 }
@@ -20,14 +20,21 @@
 
 .ac-custom label::before {
   content: '';
-  border: 3px solid rgb(60, 60, 60);
+  border: 2px solid rgb(60, 60, 60);
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
 .ac-radio label::before {
   border-radius: 50%;
-  margin-top: -4px;
+  margin-top: 0px;
+}
+
+.ac-radio label {
+  margin-bottom: 0px;
+  font-weight: normal;
+  margin-left: -20px;
+  cursor: pointer;
 }
 
 .ac-radio li {
@@ -48,10 +55,10 @@
 
 .ac-custom svg {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-top: 0px;
-  left: 3px;
+  width: 19px;
+  height: 19px;
+  margin-top: 1px;
+  left: 1px;
   pointer-events: none;
 }
 
@@ -64,111 +71,108 @@
 }
 
 .ac-circle svg {
-  width: 35px;
-  height: 35px;
-  margin-top: -9px;
-  left: -5px;
+  width: 21px;
+  height: 21px;
+  margin-top: -3px;
+  left: 1px;
 }
 
 .ac-circle svg path {
-  stroke-width: 3px;
+  stroke-width: 2px;
 } 
 
 .ac-boxfill svg path {
-  stroke-width: 4px;
+  stroke-width: 2px;
 } 
 
 .ac-swirl svg path {
-  stroke-width: 4px;
+  stroke-width: 2px;
 }
 
 .ac-list svg path {
   stroke-width: 2px;
 }
 
-.cbp-vimenu {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  height: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  z-index: 999999999;
-}
-
-.cbp-vimenu li a {
+span.symath-logo {
   display: block;
-  text-indent: -500em;
-  height: 96px;
-  width: 96px;
-  line-height: 96px;
-  text-align: center;
-  color: rgb(60, 60, 60);
-  position: relative;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  -webkit-transition: background 0.1s ease-in-out;
-  -moz-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
-}
-
-.cbp-vimenu li:hover/*,
-.cbp-vimenu li:first-child a*/ {
-  background: #0088CC;
-}
-
-.cbp-vimenu li a:hover/*,
-.cbp-vimenu li:first-child a*/ {
-  color: #FFFFFF;
-}
-
-.cbp-vimenu li.cbp-vicurrent {
-  background: #FFFFFF;
-  border-right: 5px solid #0088CC;
-}
-
-.cbp-vimenu li.cbp-vicurrent a {
-  color: #0088CC;
-}
-
-.cbp-vimenu li a:before {
-  speak: none;
-  text-indent: 0em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 35px;
-  -webkit-font-smoothing: antialiased;
-}
-
-.symath-logo {
-  width: 101px;
-  height: 96px;
-  background-image: linear-gradient(to bottom, rgb(60, 60, 60) 0%, rgb(34, 34, 34) 100%);
-  background-repeat: repeat-x;
-  background-color: rgb(34, 34, 34);
-  border-color: rgb(8, 8, 8);
-  margin-bottom: -1px;
-  border: 1px solid transparent;
-}
-
-.symath-logo a {
   background-image: url(../images/logo.png);
   width: 96px;
   height: 96px;
 }
 
+span.symath-logo:hover {
+  background-color: #0088CC;
+}
+
 .my-container {
-  margin-left: 101px;
+  margin-top: 96px;
 }
 
 .my-line {
-  height: 96px;
+  
 }
 
-.hint, [data-hint] {
-  position: fixed;
+.my-menu li {
+  margin-top: 10px;
 }
+
+.my-menu li:not(:first-child) {
+  border-left: 1px solid rgba(43, 43, 43, .25);
+}
+
+.my-menu li a span {
+  font-size: 43px;
+  padding-top: 25px;
+}
+
+.modal-backdrop.am-fade {
+  opacity: .5;
+  transition: opacity .15s linear;
+  &.ng-enter {
+    opacity: 0;
+    &.ng-enter-active {
+      opacity: .5;
+    }
+  }
+  &.ng-leave {
+    opacity: .5;
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+
+.modal {
+  overflow-x: auto;
+  overflow-y: auto;
+  &.center {
+    .modal-dialog {
+      position: fixed;
+      /*top: 40%;
+      left: 50%;
+      min-width: 100px;
+      width: 50%;
+      transform: translateX(-50%) translateY(-50%);*/
+    }
+  }
+}
+/*.my-menu {
+  position: fixed;
+  left: 0px;
+  top: 96px;
+  list-style: none;
+  width: 50px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.my-menu li {
+  width: 50px;
+  height: 50px;
+}
+
+.my-menu li a {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}*/

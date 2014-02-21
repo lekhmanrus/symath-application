@@ -1,0 +1,41 @@
+{
+  "name": "symath-application",
+  "description": "UI for libsymath-js based on node-webkit",
+  "version": "0.0.1",
+  "homepage": "https://github.com/denzp/symath-application",
+  "author": {
+    "name": "Denys Zaryiaiev",
+    "email": "denys.zariaiev@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Denys Zariaiev",
+      "email": "denys.zariaiev@gmail.com"
+    },
+    {
+      "name": "Ruslan Lekhman",
+      "email": "lekhman-ruslan@i.ua"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denzp/symath-application.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denzp/symath-application/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/denzp/symath-application/blob/master/LICENSE"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "grunt": "*",
+    "grunt-node-webkit-builder": "*"
+  }
+}
