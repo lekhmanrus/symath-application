@@ -7,7 +7,7 @@
   "window": {
     "title": "SyMath",
     "icon": "favicon.png",
-    "toolbar": true,
+    "toolbar": false,
     "frame": true,
     "min_width": 771,
     "min_height": 255,

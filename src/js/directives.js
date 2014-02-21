@@ -27,7 +27,10 @@ angular.module('symathApp.directives', [])
         var keyupHandler = function() {
           if(element.val().length > 0) {
             $('#' + attrs.uiMathJax).html('`' + element.val() + '`');
-            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            MathJax.Hub.Queue(
+              ["setRenderer", MathJax.Hub, "SVG"],
+              ["Typeset", MathJax.Hub]
+            );
           }
           else
             $('#' + attrs.uiMathJax).html('No data input.');
