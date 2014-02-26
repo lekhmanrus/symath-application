@@ -1,18 +1,24 @@
 {
   "main": "index.html",
   "name": "SyMath",
+  
   "description": "UI for libsymath-js based on node-webkit",
   "version": "0.1.0",
   "keywords": [ "symath-application", "libsymath-js", "node-webkit" ],
+  
   "window": {
     "title": "SyMath",
     "icon": "favicon.png",
-    "toolbar": false,
+    "toolbar": true,
     "frame": true,
-    "min_width": 771,
-    "min_height": 255,
-    "width": 855,
-    "height": 855,
+    "min_width": 800,
+    "min_height": 300,
+    "width": 800,
+    "height": 600,
     "position": "center"
+  },
+  
+  "dependencies": {
+    "libsymath": "git+https://github.com/denzp/libsymath-js.git"
   }
 }

@@ -19,7 +19,7 @@
           <span class="symath-logo"></span>
         </div>
         <ul class="nav navbar-nav navbar-right my-menu">
-          <li>
+          <li ng-click="calculate()">
             <a href="#" class="hint--bottom" data-hint="Calculate">
               <span class="icon-equals"></span>
             </a>
@@ -49,28 +49,26 @@
     </div>
 
     <div class="container my-container">
-      <div class="col-sm-9">
-        <h2>Input</h2>
-        <textarea class="form-control" rows="3" ui-math-jax="inpMathJax"></textarea>
+      <div class="row">
+        <div class="col-sm-9">
+          <h2>Input</h2>
+          <textarea class="form-control" rows="3" ui-math-jax="inpMathJax" ng-model="inputText"></textarea>
+        </div>
+        <div class="col-sm-3">
+          <form class="ac-custom ac-radio ac-fill" autocomplete="off">
+            <h2>Mode</h2>
+            <ul>
+              <li><input id="r2" name="r1" type="radio"><label for="r2">factorized</label></li>
+              <li><input id="r3" name="r1" type="radio"><label for="r3">expanced</label></li>
+            </ul>
+          </form>
+        </div>
       </div>
-      <div class="col-sm-3">
-        <form class="ac-custom ac-radio ac-fill" autocomplete="off">
-          <h2>Mode</h2>
-          <ul>
-            <li><input id="r2" name="r1" type="radio"><label for="r2">factorized</label></li>
-            <li><input id="r3" name="r1" type="radio"><label for="r3">expanced</label></li>
-          </ul>
-        </form>
-      </div>
-      <div class="clearfix"></div>
-      <br />
-      <div class="well well-sm">
-        <span id="inpMathJax"></span>
-      </div>
-      <div class="clearfix"></div>
-      <h2>Output</h2>
-      <div class="jumbotron">
-        <p>{answer there}</p>
+      <div class="row" ng-show="ready">
+        <h2>Output</h2>
+        <div class="well well-sm">
+          <p ng-bind="output"></p>
+        </div>
       </div>
     </div>
   </body>
@@ -87,5 +85,12 @@
   <script type="text/javascript" src="js/filters.js"></script>
   <script type="text/javascript" src="js/services.js"></script>
   <script type="text/javascript" src="lib/svgcheckbx.js"></script>
-  <script type="text/javascript" src="lib/MathJax/MathJax.js?config=AM_HTMLorMML-full"></script>
+  <script type="text/javascript" src="lib/MathJax/MathJax.js">
+    MathJax.Hub.Config({
+      config: ["TeX-AMS-MML_SVG.js"],
+      jax: ["input/TeX", "output/SVG"],
+      mainMenu: false,
+      extensions: ["tex2jax.js"]
+    });
+  </script>
 </html>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('symathApp.controllers', [])
-  .controller('indexCtrl', ['$scope', '$modal', function($scope, $modal) {
+  .controller('indexCtrl', ['$scope', '$modal', '$timeout', function($scope, $modal, $timeout) {
 
     $scope.docs = function() {
       $scope.title = 'Documentation';
@@ -22,5 +22,29 @@ angular.module('symathApp.controllers', [])
     $scope.about = function() {
       var docsModal = $modal({scope: $scope, template: 'partials/modal/about.tpl.html', animation: 'scale-fade', position: 'center'});
     };
+    
+    $scope.calculate = function() {
+      if(!$scope.inputText) {
+        return;
+      }
+      
+      var lib = require('libsymath'),
+          expression;
+      
+      expression = new lib.Expression($scope.inputText);
+      expression.optimize();
+      
+      $scope.output = '\\begin{equation}' + expression.getRoot().serializeTeX() + '\\end{equation}';
+      $scope.ready = false;
+      
+      $timeout(function() {
+        MathJax.Hub.Queue(
+          ["setRenderer", MathJax.Hub, "SVG"],
+          ["Typeset", MathJax.Hub]
+        );
+        
+        $scope.ready = true;
+      });
+    }
 
   }]);

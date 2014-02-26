@@ -6,11 +6,11 @@ module.exports = function(grunt) {
     nodewebkit: {
       options: {
         build_dir: './build',
-        mac_icns: './src/favicon.icns',
-        mac: true,
+        mac: false,
         win: true,
         linux32: true,
-        linux64: true
+        linux64: true,
+        version: '0.9.2'
       },
       src: ['./src/**/*']
     }
