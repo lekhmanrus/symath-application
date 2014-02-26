@@ -96,24 +96,16 @@
 span.symath-logo {
   display: block;
   background-image: url(../images/logo.png);
-  width: 96px;
-  height: 96px;
-}
-
-span.symath-logo:hover {
-  background-color: #0088CC;
+  width: 57px;
+  height: 57px;
 }
 
 .my-container {
-  margin-top: 96px;
-}
-
-.my-line {
-  
+  margin-top: 57px;
 }
 
 .my-menu li {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .my-menu li:not(:first-child) {
@@ -121,8 +113,8 @@ span.symath-logo:hover {
 }
 
 .my-menu li a span {
-  font-size: 43px;
-  padding-top: 25px;
+  font-size: 23px;
+  padding-top: 0px;
 }
 
 .modal-backdrop.am-fade {
@@ -148,31 +140,6 @@ span.symath-logo:hover {
   &.center {
     .modal-dialog {
       position: fixed;
-      /*top: 40%;
-      left: 50%;
-      min-width: 100px;
-      width: 50%;
-      transform: translateX(-50%) translateY(-50%);*/
     }
   }
 }
-/*.my-menu {
-  position: fixed;
-  left: 0px;
-  top: 96px;
-  list-style: none;
-  width: 50px;
-  margin: 0px;
-  padding: 0px;
-}
-
-.my-menu li {
-  width: 50px;
-  height: 50px;
-}
-
-.my-menu li a {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-}*/
