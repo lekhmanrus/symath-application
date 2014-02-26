@@ -16,11 +16,11 @@ angular.module('symathApp.controllers', [])
         $scope.current = id;
         $scope.content = $scope.items[id].content;
       };
-      var docsModal = $modal({scope: $scope, template: 'partials/modal/docs.tpl.html', animation: 'scale-fade', position: 'center'});
+      var modal = $modal({scope: $scope, template: 'partials/modal/docs.tpl.html', animation: 'scale-fade', position: 'center'});
     };
 
     $scope.about = function() {
-      var docsModal = $modal({scope: $scope, template: 'partials/modal/about.tpl.html', animation: 'scale-fade', position: 'center'});
+      var modal = $modal({scope: $scope, template: 'partials/modal/about.tpl.html', animation: 'scale-fade', position: 'center'});
     };
     
     $scope.calculate = function() {
