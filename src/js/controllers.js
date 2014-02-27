@@ -83,4 +83,11 @@ angular.module('symathApp.controllers', [])
       return $scope.setError('Internal error!');
     }
   }
+  
+  $scope.clear = function() {
+    $scope.showOutputTeX = false;
+    $scope.outputTeX = undefined;
+    $scope.errorMsg = undefined;
+    $scope.inputExpr = '';
+  }
 }]);
