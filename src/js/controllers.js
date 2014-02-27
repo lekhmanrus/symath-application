@@ -6,7 +6,7 @@ angular.module('symathApp.controllers', [])
   $scope.docs = function() {
     $scope.title = 'Documentation';
     $scope.items = [
-                      {index: 0, title: 'some', content: 'tra'},
+                      {index: 0, title: 'Addition', content: ['tr', 'sdtr']},
                       {index: 1, title: '11111', content: '1111111111111111111111111'},
                       {index: 2, title: '2', content: '222'}
                   ];
