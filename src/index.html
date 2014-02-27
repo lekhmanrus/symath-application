@@ -10,6 +10,31 @@
     <link rel="stylesheet" type="text/css" href="css/ng-animation.css" />
     <link rel="stylesheet" type="text/css" href="css/hint.css" />
     <link rel="stylesheet" type="text/css" href="css/app.css" />
+    
+    <script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/angular-strap.min.js"></script>
+    <script type="text/javascript" src="lib/angular-strap.tpl.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/directives.js"></script>
+    <script type="text/javascript" src="js/filters.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="lib/MathJax/MathJax.js">
+      MathJax.Hub.Config({
+        config: ["TeX-AMS-MML_SVG.js"],
+        jax: ["input/TeX", "output/SVG"],
+        showMathMenu: false,
+        extensions: ["tex2jax.js"],
+        
+        SVG: {
+          font: "Asana-Math"
+        }
+      });
+    </script>
   </head>
   <body ng-controller="indexCtrl">
 
@@ -51,12 +76,12 @@
     <div class="container my-container">
       <div class="row">
         <div class="col-sm-9">
-          <h2>Input</h2>
-          <textarea class="form-control" rows="3" ui-math-jax="inpMathJax" ng-model="inputText"></textarea>
+          <h3 class="text-muted">Input</h3>
+          <textarea class="form-control" rows="3" ng-model="inputExpr"></textarea>
         </div>
         <div class="col-sm-3">
           <form class="ac-custom ac-radio ac-fill" autocomplete="off">
-            <h2>Mode</h2>
+            <h3 class="text-muted">Mode</h3>
             <ul>
               <li><input id="r2" name="r1" type="radio"><label for="r2">factorized</label></li>
               <li><input id="r3" name="r1" type="radio"><label for="r3">expanced</label></li>
@@ -64,33 +89,22 @@
           </form>
         </div>
       </div>
-      <div class="row" ng-show="ready">
-        <h2>Output</h2>
-        <div class="well well-sm">
-          <p ng-bind="output"></p>
+      
+      <div class="row ng-hide" ng-show="errorMsg">
+        <h3 class="text-danger">Error</h3>
+        <div class="alert alert-danger">
+          <p ng-bind="errorMsg[0]"></p>
+          <p ng-show="errorMsg.length == 2" ng-bind-html="errorMsg[1]"></p>
         </div>
       </div>
+      
+      <div class="row ng-hide" ng-show="showOutputTeX && outputTeX">
+        <h3 class="text-success">Output</h3>
+        <div class="well well-sm" ng-bind="outputTeX"></div>
+      </div>
+      
     </div>
   </body>
-  <script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
-  <script type="text/javascript" src="lib/angular/angular.js"></script>
-  <script type="text/javascript" src="lib/angular/angular-animate.js"></script>
-  <script type="text/javascript" src="lib/angular-strap.js"></script>
-  <script type="text/javascript" src="lib/angular-strap.tpl.js"></script>
-  <script type="text/javascript" src="lib/bootstrap.js"></script>
-  <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.10.0.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
-  <script type="text/javascript" src="js/controllers.js"></script>
-  <script type="text/javascript" src="js/directives.js"></script>
-  <script type="text/javascript" src="js/filters.js"></script>
-  <script type="text/javascript" src="js/services.js"></script>
+  
   <script type="text/javascript" src="lib/svgcheckbx.js"></script>
-  <script type="text/javascript" src="lib/MathJax/MathJax.js">
-    MathJax.Hub.Config({
-      config: ["TeX-AMS-MML_SVG.js"],
-      jax: ["input/TeX", "output/SVG"],
-      showMathMenu: false,
-      extensions: ["tex2jax.js"]
-    });
-  </script>
 </html>
