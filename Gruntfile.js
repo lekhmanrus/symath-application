@@ -4,7 +4,8 @@ module.exports = function(grunt) {
   
   grunt.loadNpmTasks('grunt-node-webkit-builder');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  
+  grunt.loadNpmTasks('grunt-contrib-connect');
+
   grunt.registerTask('npm-install', 'install the application dependencies', function() {
     // adapted from http://www.dzone.com/snippets/execute-unix-command-nodejs
     var exec = require('child_process').exec,
@@ -29,10 +30,25 @@ module.exports = function(grunt) {
     },
     src: ['./src/**/*']
   });
+
+  grunt.config.set('connect', {
+    symath: {
+      options: {
+        hostname: 'localhost',
+        port: 8888,
+        base: 'src',
+        keepalive: true,
+        open: {
+          target: 'http://localhost:8888',
+          appName: 'xdg-open'
+        }
+      }
+    }
+  });
   
   grunt.config.set('clean', {
     MathJax: [ 'src/lib/MathJax/fonts', 'src/lib/MathJax/unpacked' ]
   });
   
-  grunt.registerTask('default', ['npm-install', 'clean', 'nodewebkit']);
+  grunt.registerTask('default', ['npm-install', 'clean', 'nodewebkit', 'connect']);
 };

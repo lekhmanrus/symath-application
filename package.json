@@ -37,6 +37,7 @@
   "dependencies": {
     "grunt": "*",
     "grunt-node-webkit-builder": "*",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "*"
   }
 }
