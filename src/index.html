@@ -19,6 +19,7 @@
     <script type="text/javascript" src="lib/angular-strap.tpl.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script type="text/javascript" src="lib/mousetrap.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers.js"></script>
     <script type="text/javascript" src="js/directives.js"></script>
@@ -39,40 +40,34 @@
   </head>
   <body ng-controller="indexCtrl">
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <span class="symath-logo"></span>
-        </div>
-        <ul class="nav navbar-nav navbar-right my-menu">
-          <li ng-click="calculate()">
-            <a href="#" class="hint--bottom" data-hint="Calculate">
-              <span class="icon-equals"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="hint--bottom" data-hint="Save as...">
-              <span class="icon-save"></span>
-            </a>
-          </li>
-          <li ng-click="clear()">
-            <a href="#" class="hint--bottom" data-hint="Clear">
-              <span class="icon-eraser"></span>
-            </a>
-          </li>
-          <li ng-click="docs()">
-            <a href="#" class="hint--bottom" data-hint="Cookbook">
-              <span class="icon-question2"></span>
-            </a>
-          </li>
-          <li ng-click="about()">
-            <a href="#" class="hint--bottom" data-hint="About">
-              <span class="icon-info-large"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <ul class="left-menu">
+      <li><span></span></li>
+      <li class="important" ng-click="calculate()">
+        <a href="#" class="hint--right" data-hint="Calculate (Enter / Ctrl+E / = / e)">
+          <span class="icon-equals"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hint--right" data-hint="Save (Ctrl+S)">
+          <span class="icon-save"></span>
+        </a>
+      </li>
+      <li ng-click="clear()">
+        <a href="#" class="hint--right" data-hint="Clear (Del / Backspace)">
+          <span class="icon-eraser"></span>
+        </a>
+      </li>
+      <li ng-click="docs()">
+        <a href="#" class="hint--right" data-hint="Cookbook (F1 / Ctrl+H / h)">
+          <span class="icon-book3"></span>
+        </a>
+      </li>
+      <li ng-click="about()">
+        <a href="#" class="hint--right" data-hint="About (Ctrl+I / i)">
+          <span class="icon-info-large"></span>
+        </a>
+      </li>
+    </ul>
 
     <div class="container my-container">
       <div class="row">

@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'symath-icon';
-	src:url('../fonts/symath-icon.eot?6xqrej');
-	src:url('../fonts/symath-icon.eot?#iefix6xqrej') format('embedded-opentype'),
-		url('../fonts/symath-icon.woff?6xqrej') format('woff'),
-		url('../fonts/symath-icon.ttf?6xqrej') format('truetype'),
-		url('../fonts/symath-icon.svg?6xqrej#symath-icon') format('svg');
+	src:url('../fonts/symath-icon.eot?el2mnt');
+	src:url('../fonts/symath-icon.eot?#iefixel2mnt') format('embedded-opentype'),
+		url('../fonts/symath-icon.woff?el2mnt') format('woff'),
+		url('../fonts/symath-icon.ttf?el2mnt') format('truetype'),
+		url('../fonts/symath-icon.svg?el2mnt#symath-icon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -104,6 +104,12 @@
 .icon-close:before {
 	content: "\e61a";
 }
+.icon-book:before {
+	content: "\e632";
+}
+.icon-book2:before {
+	content: "\e633";
+}
 .icon-floppy2:before {
 	content: "\e61b";
 }
@@ -158,11 +164,20 @@
 .icon-support3:before {
 	content: "\e62c";
 }
+.icon-book3:before {
+	content: "\e634";
+}
 .icon-docs:before {
 	content: "\e62d";
 }
 .icon-info4:before {
 	content: "\e62e";
+}
+.icon-book4:before {
+	content: "\e635";
+}
+.icon-book5:before {
+	content: "\e636";
 }
 .icon-support4:before {
 	content: "\e62f";

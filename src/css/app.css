@@ -93,28 +93,8 @@
   stroke-width: 2px;
 }
 
-span.symath-logo {
-  display: block;
-  background-image: url(../images/logo.png);
-  width: 57px;
-  height: 57px;
-}
-
 .my-container {
-  margin-top: 57px;
-}
-
-.my-menu li {
-  margin-top: 0px;
-}
-
-.my-menu li:not(:first-child) {
-  border-left: 1px solid rgba(43, 43, 43, .25);
-}
-
-.my-menu li a span {
-  font-size: 23px;
-  padding-top: 0px;
+  margin-left: 75px;
 }
 
 .modal-backdrop.am-fade {
@@ -142,4 +122,65 @@ span.symath-logo {
       position: fixed;
     }
   }
+}
+
+ul.left-menu {
+  width: 63px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  list-style-type: none;
+  background: #f7f7f7;
+  z-index: 1;
+  padding: 0px;
+  margin: 0px;
+  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+}
+
+ul.left-menu li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  left: 0px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease-in-out;
+}
+
+ul.left-menu li:first-child span {
+  display: block;
+  background-image: url(../images/logo.png);
+  width: 57px;
+  height: 57px;
+  margin-left: 3px;
+}
+
+ul.left-menu li:first-child {
+  background-color: #0088CC;
+}
+
+ul.left-menu li a {
+  color: #555555;
+  font-size: 43px;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+ul.left-menu li.important a {
+  color: #5CB85C;
+}
+
+ul.left-menu li:not(:first-child):hover {
+  background: #0088CC;
+}
+
+ul.left-menu li:not(:first-child):hover a {
+  color: #FFFFFF;
+}
+
+
+ul.left-menu li.important:not(:first-child):hover {
+  background: #5CB85C;
 }

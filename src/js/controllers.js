@@ -92,4 +92,33 @@ angular.module('symathApp.controllers', [])
     $scope.inputExpr = '';
   }
 
+  Mousetrap.bind(['enter', 'command+e', 'ctrl+e', '=', 'e'], function() {
+    $timeout(function() {
+      $scope.calculate();
+    });
+    return false;
+  });
+  Mousetrap.bind(['command+s', 'ctrl+s'], function() {
+    alert('save');
+    return false;
+  });
+  Mousetrap.bind(['del', 'backspace'], function() {
+    $timeout(function() {
+      $scope.clear();
+    });
+    return false;
+  });
+  Mousetrap.bind(['f1', 'ctrl+h', 'h'], function() {
+    $timeout(function() {
+      $scope.docs();
+    });
+    return false;
+  });
+  Mousetrap.bind(['ctrl+i', 'i'], function() {
+    $timeout(function() {
+      $scope.about();
+    });
+    return false;
+  });
+
 }]);
