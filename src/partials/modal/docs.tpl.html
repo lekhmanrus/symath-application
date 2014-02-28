@@ -13,7 +13,9 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="well" ng-bind="content"></div>
+            <div class="well">
+              <p ng-repeat="item in content">{{item}}</p>
+            </div>
           </div>
         </div>
       </div>
