@@ -15,11 +15,13 @@ angular.module('symathApp.services', [])
     content: [
       {
         clickable: true,
-        value: '7 + 14 = 21'
+        text: '7 + 14 = 21',
+        value: '7 + 14'
       },
       {
         clickable: true,
-        value: '21 * d + 3 * d = 24 * d'
+        text: '21 * d + 3 * d = 24 * d',
+        value: '21 * d + 3 * d'
       }
   ]},
   {
@@ -28,11 +30,13 @@ angular.module('symathApp.services', [])
     content: [
       {
         clickable: true,
-        value: '127 - 8 = 119'
+        text: '127 - 8 = 119',
+        value: '127 - 8'
       },
       {
         clickable: true,
-        value: '21 * d - 3 * d = 18 * d'
+        text: '21 * d - 3 * d = 18 * d',
+        value: '21 * d - 3 * d'
       }
   ]},
   {
@@ -41,11 +45,13 @@ angular.module('symathApp.services', [])
     content: [
       {
         clickable: true,
-        value: '15 * 3 = 45'
+        text: '15 * 3 = 45',
+        value: '15 * 3'
       },
       {
         clickable: true,
-        value: '30 * b *c  * c = 30 * b * c^2'
+        text: '30 * b *c  * c = 30 * b * c ^ 2',
+        value: '30 * b * c * c'
       }
   ]},
   {
@@ -54,11 +60,13 @@ angular.module('symathApp.services', [])
     content: [
       {
         clickable: true,
-        value: '33 / 11 = 3'
+        text: '33 / 11 = 3',
+        value: '33 / 11'
       },
       {
         clickable: true,
-        value: '3*a / a = 3'
+        text: '3 * a / a = 3',
+        value: '3 * a / a'
       }
   ]},
   {
@@ -66,7 +74,8 @@ angular.module('symathApp.services', [])
     title: 'Involution',
     content: [{
       clickable: true,
-      value: '2^5 + 3^2'
+      text: '2 ^ 5 + 3 ^ 2 = 41',
+      value: '2 ^ 5 + 3 ^ 2'
   }]},
   {
     index: 5,
@@ -74,11 +83,12 @@ angular.module('symathApp.services', [])
     content: [
       {
         clickable: false,
-        value: 'For operations with fractions, just write numbers, using slash and press the button.'
+        text: 'For operations with fractions, just write numbers, using slash and press the button.'
       },
       {
         clickable: true,
-        value: '7/8 + 4/8 =11/8'
+        text: '7/8 + 4/8 = 11/8',
+        value: '7/8 + 4/8'
       }
   ]},
   {
@@ -87,14 +97,17 @@ angular.module('symathApp.services', [])
     content: [
       {
         clickable: true,
-        value: 'sin(?)'
+        text: 'sin(30)',
+        value: 'sin(30)'
       },
       {
         clickable: true,
+        text: 'tan(60)',
         value: 'tan(60)'
       },
       {
         clickable: true,
+        text: '5*cos(0.56)',
         value: '5*cos(0.56)'
       }
   ]},
@@ -103,13 +116,15 @@ angular.module('symathApp.services', [])
     title: 'Solve equations',
     content: [{
       clickable: true,
-      value: 'x^2 + 3*x1 - 4 = 0'
+      text: 'x ^ 2 + 3 * x1 - 4 = 0',
+      value: 'x ^ 2 + 3 * x1 - 4'
   }]},
   {
     index: 8,
     title: 'Integrals',
     content: [{
       clickable: true,
+      text: 'int (x+y) dx',
       value: 'int (x+y) dx'
   }]},
   {
@@ -117,6 +132,7 @@ angular.module('symathApp.services', [])
     title: 'Derivatives',
     content: [{
       clickable: true,
+      text: 'partial x/dx (x^2 + 5)',
       value: 'partial x/dx (x^2 + 5)'
   }]},
   {
@@ -124,6 +140,7 @@ angular.module('symathApp.services', [])
     title: 'Complex numbers',
     content: [{
       clickable: true,
+      text: '5 + 3i',
       value: '5 + 3i'
   }]}
 ]);

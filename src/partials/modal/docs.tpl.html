@@ -15,8 +15,8 @@
           <div class="col-sm-8">
             <div class="well">
               <p ng-repeat="item in content">
-                <a ng-if="item.clickable" href="#" ng-bind="item.value" ng-click="loadCookbookExpression(item.value)"></a>
-                <span ng-if="!item.clickable" ng-bind="item.value"></span>
+                <a ng-if="item.clickable" href="#" ng-bind="item.text" ng-click="loadCookbookExpression(item.value)"></a>
+                <span ng-if="!item.clickable" ng-bind="item.text"></span>
               </p>
             </div>
           </div>
