@@ -7,14 +7,17 @@
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="list-group">
               <a href="#" class="list-group-item" ng-class="{'active': current == item.index}" ng-repeat="item in items" ng-click="show(item.index)">{{item.title}}</a>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-8">
             <div class="well">
-              <p ng-repeat="item in content">{{item}}</p>
+              <p ng-repeat="item in content">
+                <a ng-if="item.clickable" href="#" ng-bind="item.value" ng-click="loadCookbookExpression(item.value)"></a>
+                <span ng-if="!item.clickable" ng-bind="item.value"></span>
+              </p>
             </div>
           </div>
         </div>
