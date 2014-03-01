@@ -42,28 +42,28 @@
 
     <ul class="left-menu">
       <li><span></span></li>
-      <li class="important" ng-click="calculate()">
-        <a href="#" class="hint--right" data-hint="Calculate (Enter / Ctrl+E / = / e)">
+      <li ng-click="calculate()" class="important">
+        <a href="#" class="hint--right" data-hint="Calculate (Ctrl+E / =)">
           <span class="icon-equals"></span>
         </a>
       </li>
-      <li>
+      <li ng-click="save()">
         <a href="#" class="hint--right" data-hint="Save (Ctrl+S)">
           <span class="icon-save"></span>
         </a>
       </li>
       <li ng-click="clear()">
-        <a href="#" class="hint--right" data-hint="Clear (Del / Backspace)">
+        <a href="#" class="hint--right" data-hint="Clear (Ctrl+R)">
           <span class="icon-eraser"></span>
         </a>
       </li>
       <li ng-click="docs()">
-        <a href="#" class="hint--right" data-hint="Cookbook (F1 / Ctrl+H / h)">
+        <a href="#" class="hint--right" data-hint="Cookbook (Ctrl+H / F1)">
           <span class="icon-book3"></span>
         </a>
       </li>
       <li ng-click="about()">
-        <a href="#" class="hint--right" data-hint="About (Ctrl+I / i)">
+        <a href="#" class="hint--right" data-hint="About (Ctrl+I)">
           <span class="icon-info-large"></span>
         </a>
       </li>
@@ -73,7 +73,7 @@
       <div class="row">
         <div class="col-sm-9">
           <h3 class="text-muted">Input</h3>
-          <textarea class="form-control" rows="3" ng-model="inputExpr"></textarea>
+          <textarea class="form-control" rows="3" ng-model="inputExpr" app-symath-input></textarea>
         </div>
         <div class="col-sm-3">
           <form class="ac-custom ac-radio ac-fill" autocomplete="off">

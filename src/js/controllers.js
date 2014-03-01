@@ -92,6 +92,10 @@ angular.module('symathApp.controllers', [])
     $scope.inputExpr = '';
   }
 
+  $scope.save = function() {
+    alert('save');
+  }
+
   Mousetrap.bind(['enter', 'command+e', 'ctrl+e', '=', 'e'], function() {
     $timeout(function() {
       $scope.calculate();
@@ -99,7 +103,9 @@ angular.module('symathApp.controllers', [])
     return false;
   });
   Mousetrap.bind(['command+s', 'ctrl+s'], function() {
-    alert('save');
+    $timeout(function() {
+      $scope.save();
+    });
     return false;
   });
   Mousetrap.bind(['del', 'backspace'], function() {
