@@ -26,7 +26,7 @@ module.exports = function(grunt) {
       win: true,
       linux32: true,
       linux64: true,
-      version: '0.9.1'
+      version: '0.9.2'
     },
     src: ['./src/**/*']
   });

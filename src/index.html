@@ -19,6 +19,7 @@
     <script type="text/javascript" src="lib/angular-strap.tpl.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script type="text/javascript" src="lib/mousetrap.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers.js"></script>
     <script type="text/javascript" src="js/directives.js"></script>
@@ -39,46 +40,40 @@
   </head>
   <body ng-controller="indexCtrl">
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <span class="symath-logo"></span>
-        </div>
-        <ul class="nav navbar-nav navbar-right my-menu">
-          <li ng-click="calculate()">
-            <a href="#" class="hint--bottom" data-hint="Calculate">
-              <span class="icon-equals"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="hint--bottom" data-hint="Save as...">
-              <span class="icon-save"></span>
-            </a>
-          </li>
-          <li ng-click="clear()">
-            <a href="#" class="hint--bottom" data-hint="Clear">
-              <span class="icon-eraser"></span>
-            </a>
-          </li>
-          <li ng-click="docs()">
-            <a href="#" class="hint--bottom" data-hint="Documentation">
-              <span class="icon-question2"></span>
-            </a>
-          </li>
-          <li ng-click="about()">
-            <a href="#" class="hint--bottom" data-hint="About">
-              <span class="icon-info-large"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <ul class="left-menu">
+      <li><span></span></li>
+      <li ng-click="calculate()" class="important">
+        <a href="#" class="hint--right" data-hint="Calculate (Ctrl+E / =)">
+          <span class="icon-equals"></span>
+        </a>
+      </li>
+      <li ng-click="save()">
+        <a href="#" class="hint--right" data-hint="Save (Ctrl+S)">
+          <span class="icon-save"></span>
+        </a>
+      </li>
+      <li ng-click="clear()">
+        <a href="#" class="hint--right" data-hint="Clear (Ctrl+R)">
+          <span class="icon-eraser"></span>
+        </a>
+      </li>
+      <li ng-click="docs()">
+        <a href="#" class="hint--right" data-hint="Cookbook (Ctrl+H / F1)">
+          <span class="icon-book3"></span>
+        </a>
+      </li>
+      <li ng-click="about()">
+        <a href="#" class="hint--right" data-hint="About (Ctrl+I)">
+          <span class="icon-info-large"></span>
+        </a>
+      </li>
+    </ul>
 
     <div class="container my-container">
       <div class="row">
         <div class="col-sm-9">
           <h3 class="text-muted">Input</h3>
-          <textarea class="form-control" rows="3" ng-model="inputExpr"></textarea>
+          <textarea class="form-control" rows="3" ng-model="inputExpr" app-symath-input></textarea>
         </div>
         <div class="col-sm-3">
           <form class="ac-custom ac-radio ac-fill" autocomplete="off">
