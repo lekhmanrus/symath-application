@@ -1,12 +1,15 @@
 .ac-custom input[type="checkbox"],
-.ac-custom input[type="radio"],
-.ac-custom label::before {
+.ac-custom input[type="radio"] {
+  display: none;
+}
+.ac-custom li::before {
   width: 21px;
   height: 21px;
-  left: 0;
   margin-top: -10px;
-  position: absolute;
+  display: block;
   cursor: pointer;
+  position: absolute;
+  float: left;
 }
 
 .ac-custom input[type="checkbox"],
@@ -16,16 +19,17 @@
   display: inline-block;
   vertical-align: middle;
   z-index: 100;
+  display: none;
 }
 
-.ac-custom label::before {
+.ac-custom li::before {
   content: '';
   border: 2px solid rgb(60, 60, 60);
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-.ac-radio label::before {
+.ac-radio li::before {
   border-radius: 50%;
   margin-top: 0px;
 }
@@ -33,10 +37,13 @@
 .ac-radio label {
   margin-bottom: 0px;
   font-weight: normal;
-  margin-left: -20px;
+  padding-left: 10px;
   cursor: pointer;
 }
 
+.ac-radio ul {
+  padding-left: 5px;
+}
 .ac-radio li {
   list-style: none;
   padding: 5px;
@@ -54,12 +61,12 @@
 }
 
 .ac-custom svg {
-  position: absolute;
   width: 19px;
   height: 19px;
   margin-top: 1px;
-  left: 1px;
+  margin-left: 2px;
   pointer-events: none;
+  float: left;
 }
 
 .ac-custom svg path {
@@ -70,31 +77,9 @@
   fill: none;
 }
 
-.ac-circle svg {
-  width: 21px;
-  height: 21px;
-  margin-top: -3px;
-  left: 1px;
-}
-
-.ac-circle svg path {
-  stroke-width: 2px;
-} 
-
-.ac-boxfill svg path {
-  stroke-width: 2px;
-} 
-
-.ac-swirl svg path {
-  stroke-width: 2px;
-}
-
-.ac-list svg path {
-  stroke-width: 2px;
-}
-
 .my-container {
   margin-left: 75px;
+  margin-right: 12px;
 }
 
 .modal-backdrop.am-fade {
@@ -182,4 +167,27 @@ ul.left-menu li:not(:first-child):hover a {
 
 ul.left-menu li.important:not(:first-child):hover {
   background: #5CB85C;
+}
+
+.my-container .input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-container .input-text {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0px 15px;
+}
+
+.my-container .input-mode {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 200px;
+  padding: 0px 15px;
+}
+
+.input-text .form-control {
+  resize: vertical;
+  max-height: 350px;
 }
