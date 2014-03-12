@@ -1,6 +1,16 @@
 .ac-custom input[type="checkbox"],
 .ac-custom input[type="radio"] {
-  display: none;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  opacity: 0;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  z-index: 100;
+  margin-left: -21px;
+  margin-top: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .ac-custom li::before {
   width: 21px;
@@ -10,16 +20,6 @@
   cursor: pointer;
   position: absolute;
   float: left;
-}
-
-.ac-custom input[type="checkbox"],
-.ac-custom input[type="radio"] {
-  opacity: 0;
-  -webkit-appearance: none;
-  display: inline-block;
-  vertical-align: middle;
-  z-index: 100;
-  display: none;
 }
 
 .ac-custom li::before {
@@ -177,14 +177,16 @@ ul.left-menu li.important:not(:first-child):hover {
 .my-container .input-text {
   flex-grow: 1;
   flex-shrink: 0;
-  padding: 0px 15px;
+  padding: 0px 25px;
+  padding-right: 13px;
 }
 
 .my-container .input-mode {
   flex-grow: 0;
   flex-shrink: 0;
-  width: 200px;
-  padding: 0px 15px;
+  width: 180px;
+  padding: 0px 25px;
+  padding-left: 12px;
 }
 
 .input-text .form-control {
