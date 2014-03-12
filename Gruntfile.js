@@ -50,5 +50,6 @@ module.exports = function(grunt) {
     MathJax: [ 'src/lib/MathJax/fonts', 'src/lib/MathJax/unpacked' ]
   });
   
-  grunt.registerTask('default', ['npm-install', 'clean', 'nodewebkit', 'connect']);
+  grunt.registerTask('default', ['npm-install', 'clean', 'nodewebkit']);
+  grunt.registerTask('web', ['npm-install', 'clean', 'connect']);
 };

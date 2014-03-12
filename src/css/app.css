@@ -193,3 +193,8 @@ ul.left-menu li.important:not(:first-child):hover {
   resize: vertical;
   max-height: 350px;
 }
+
+.MathJax_SVG_Display {
+  text-align: left !important;
+  padding: 0px 10px;
+}

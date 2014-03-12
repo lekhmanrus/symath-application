@@ -47,7 +47,7 @@
           <span class="icon-equals"></span>
         </a>
       </li>
-      <li ng-click="save()">
+      <li ng-if="nw" ng-click="save()">
         <a href="#" class="hint--right" data-hint="Save (Ctrl+S)">
           <span class="icon-save"></span>
         </a>
@@ -102,7 +102,7 @@
       
       <div class="ng-hide" ng-show="showOutputTeX && outputTeX">
         <h3 class="text-success">Output</h3>
-        <div class="well well-sm" ng-bind="outputTeX"></div>
+        <div class="well-sm" ng-bind="outputTeX"></div>
       </div>
       
     </div>
