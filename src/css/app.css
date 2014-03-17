@@ -141,7 +141,7 @@ ul.left-menu li:first-child span {
 }
 
 ul.left-menu li:first-child {
-  background-color: #0088CC;
+  background-color: rgb(85, 85, 85); /* #0088CC; */
 }
 
 ul.left-menu li a {

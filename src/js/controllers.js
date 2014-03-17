@@ -7,6 +7,7 @@ angular.module('symathApp.controllers', [])
   $scope.nw = typeof window.outsideNW == 'undefined';
 
   $scope.docs = function() {
+    var modal = $modal({scope: $scope, template: 'partials/modal/docs.tpl.html', animation: 'scale-fade', position: 'center'});
     $scope.title = 'Cookbook';
     $scope.items = cookbook;
     $scope.current = 0;
@@ -17,9 +18,10 @@ angular.module('symathApp.controllers', [])
     };
     $scope.loadCookbookExpression = function(val) {
       $scope.inputExpr = val;
+      //modal.show = false;
+      modal.hide();
       $scope.calculate();
     };
-    var modal = $modal({scope: $scope, template: 'partials/modal/docs.tpl.html', animation: 'scale-fade', position: 'center'});
   };
 
   $scope.about = function() {
