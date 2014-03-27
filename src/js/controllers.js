@@ -61,7 +61,7 @@ angular.module('symathApp.controllers', [])
         expression;
     
     try {
-      expression = new lib.Expression($scope.inputExpr).nice($scope.mode || 'expanced').optimize();
+      expression = new lib.Expression($scope.inputExpr).optimize().nice($scope.mode || 'expanced');
     } catch(e) {
       console.warn(e);
       return $scope.setError(e.message, $scope.highlightError(e.loc));
