@@ -132,8 +132,8 @@ angular.module('symathApp.services', [])
     title: 'Derivatives',
     content: [{
       clickable: true,
-      text: 'partial x/dx (x^2 + 5)',
-      value: 'partial x/dx (x^2 + 5)'
+      text: 'partial[x^2 + 5, x]',
+      value: 'partial[x^2 + 5, x]'
   }]},
   {
     index: 10,

@@ -61,7 +61,12 @@ angular.module('symathApp.controllers', [])
         expression;
     
     try {
-      expression = new lib.Expression($scope.inputExpr).optimize().nice($scope.mode || 'expanced');
+      if(/partial\[(.+),(.+)\]/g.test($scope.inputExpr)) {
+        var p = /partial\[(.+),(.+)\]/g.exec($scope.inputExpr);
+        expression = new lib.Expression(p[1].trim()).optimize().differentiate(p[2].trim()).nice($scope.mode || 'expanced');
+      }
+      else
+        expression = new lib.Expression($scope.inputExpr).optimize().nice($scope.mode || 'expanced');
     } catch(e) {
       console.warn(e);
       return $scope.setError(e.message, $scope.highlightError(e.loc));
