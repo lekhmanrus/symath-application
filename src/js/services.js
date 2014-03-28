@@ -111,32 +111,32 @@ angular.module('symathApp.services', [])
         value: '5*cos(0.56)'
       }
   ]},
-  {
+  /*{
     index: 7,
     title: 'Solve equations',
     content: [{
       clickable: true,
       text: 'x ^ 2 + 3 * x1 - 4 = 0',
       value: 'x ^ 2 + 3 * x1 - 4'
-  }]},
-  {
+  }]},*/
+  /*{
     index: 8,
     title: 'Integrals',
     content: [{
       clickable: true,
       text: 'int (x+y) dx',
       value: 'int (x+y) dx'
-  }]},
+  }]},*/
   {
-    index: 9,
+    index: 7,
     title: 'Derivatives',
     content: [{
       clickable: true,
-      text: 'partial[x^2 + 5, x]',
+      text: 'partial[x^2 + 5, x] = 2x',
       value: 'partial[x^2 + 5, x]'
   }]},
   {
-    index: 10,
+    index: 8,
     title: 'Complex numbers',
     content: [{
       clickable: true,
