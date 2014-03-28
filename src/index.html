@@ -43,7 +43,7 @@
     <ul class="left-menu">
       <li><span></span></li>
       <li ng-click="calculate()" class="important">
-        <a href="#" class="hint--right" data-hint="Calculate (Ctrl+E / =)">
+        <a href="#" class="hint--right" data-hint="Calculate (Ctrl+E / = / Enter)">
           <span class="icon-equals"></span>
         </a>
       </li>
@@ -103,6 +103,9 @@
       <div class="ng-hide" ng-show="showOutputTeX && outputTeX">
         <h3 class="text-success">Output</h3>
         <div class="well-sm" ng-bind="outputTeX"></div>
+        <button type="button" class="btn btn-primary">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
       </div>
       
     </div>

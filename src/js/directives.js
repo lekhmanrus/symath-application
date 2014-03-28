@@ -16,7 +16,8 @@ angular.module('symathApp.directives', [])
     $(elm).on('keydown', function(event) {
       event = event || window.event
       if((event.shiftKey == false && ((event.which || event.charCode) == 61 || (event.which || event.charCode) == 187)) || // =
-          (event.ctrlKey == true && (event.which || event.charCode) == 69) // ctrl+e
+          (event.ctrlKey == true && (event.which || event.charCode) == 69) || // ctrl+e
+          (event.which || event.charCode) == 13
         ) {
         $timeout(function() {
           scope.calculate();
