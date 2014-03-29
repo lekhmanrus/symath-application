@@ -198,3 +198,23 @@ ul.left-menu li.important:not(:first-child):hover {
   text-align: left !important;
   padding: 0px 10px;
 }
+
+.my-container .output-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-container .output-text {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0px 25px;
+  padding-right: 13px;
+}
+
+.my-container .output-add {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 165px;
+  padding: 0px 25px;
+  padding-left: 12px;
+}

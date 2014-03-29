@@ -5,6 +5,8 @@ angular.module('symathApp.controllers', [])
 .controller('indexCtrl', ['$scope', '$modal', '$timeout', '$sce', 'cookbook', function($scope, $modal, $timeout, $sce, cookbook) {
   
   $scope.nw = typeof window.outsideNW == 'undefined';
+  $scope.bydloVar = false;
+  $scope.currentOutput = '';
 
   $scope.docs = function() {
     var modal = $modal({scope: $scope, template: 'partials/modal/docs.tpl.html', animation: 'scale-fade', position: 'center'});
@@ -24,13 +26,15 @@ angular.module('symathApp.controllers', [])
     };
   };
 
-  $scope.bydloVar = false;
-
   $scope.bydloFunc = function() {
     if($scope.bydloVar)
       $scope.calculate();
     else
       $scope.bydloVar = true;
+  };
+
+  $scope.addOutputToInput = function() {
+    $scope.inputExpr = $scope.currentOutput;
   };
 
   $scope.about = function() {
@@ -45,7 +49,8 @@ angular.module('symathApp.controllers', [])
     if(loc) {
       $scope.errorMsg.push(loc);
     } 
-  }
+  };
+
   $scope.highlightError = function(loc) {
     if(!loc) {
       return;
@@ -57,7 +62,8 @@ angular.module('symathApp.controllers', [])
     text += $scope.inputExpr.substr(loc.end);
     
     return $sce.trustAsHtml(text);
-  }
+  };
+
   $scope.calculate = function() {
     if(!$scope.inputExpr || $scope.inputExpr === '') {
       return $scope.setError('No data input.');
@@ -84,7 +90,8 @@ angular.module('symathApp.controllers', [])
     if(expression.getRoot()) {
       $scope.showOutputTeX = false;
       $scope.outputTeX = '\\begin{equation}' + expression.getRoot().serializeTeX() + '\\end{equation}';
-      
+      $scope.currentOutput = expression.getRoot().serializeText();
+
       $timeout(function() {
         MathJax.Hub.Queue(
           ["setRenderer", MathJax.Hub, "SVG"],
@@ -100,14 +107,14 @@ angular.module('symathApp.controllers', [])
     else {
       return $scope.setError('Internal error!');
     }
-  }
+  };
   
   $scope.clear = function() {
     $scope.showOutputTeX = false;
     $scope.outputTeX = undefined;
     $scope.errorMsg = undefined;
     $scope.inputExpr = '';
-  }
+  };
 
   $scope.save = function() {
     var gui = require('nw.gui');
@@ -118,7 +125,7 @@ angular.module('symathApp.controllers', [])
       
       // TODO: export(img, svg.offset().top, svg.offset().left, svg.width(), svg.height())
     }, { format: 'png', datatype: 'datauri' });
-  }
+  };
 
   Mousetrap.bind(['enter', 'command+e', 'ctrl+e', '=', 'e'], function() {
     $timeout(function() {

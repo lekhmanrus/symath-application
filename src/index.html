@@ -107,10 +107,16 @@
       
       <div class="ng-hide" ng-show="showOutputTeX && outputTeX">
         <h3 class="text-success">Output</h3>
-        <div class="well-sm" ng-bind="outputTeX"></div>
-        <button type="button" class="btn btn-primary">
-          <span class="glyphicon glyphicon-plus"></span>
-        </button>
+        <div class="output-row">
+          <div class="output-text">
+            <div class="well-sm" ng-bind="outputTeX"></div>
+          </div>
+          <div class="output-add">
+            <button type="button" class="btn btn-primary" ng-click="addOutputToInput()">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </div>
+        </div>
       </div>
       
     </div>
