@@ -24,6 +24,15 @@ angular.module('symathApp.controllers', [])
     };
   };
 
+  $scope.bydloVar = false;
+
+  $scope.bydloFunc = function() {
+    if($scope.bydloVar)
+      $scope.calculate();
+    else
+      $scope.bydloVar = true;
+  };
+
   $scope.about = function() {
     var modal = $modal({scope: $scope, template: 'partials/modal/about.tpl.html', animation: 'scale-fade', position: 'center'});
   };
