@@ -5,7 +5,6 @@ angular.module('symathApp.controllers', [])
 .controller('indexCtrl', ['$scope', '$modal', '$timeout', '$sce', 'cookbook', function($scope, $modal, $timeout, $sce, cookbook) {
   
   $scope.nw = typeof window.outsideNW == 'undefined';
-  $scope.bydloVar = false;
   $scope.currentOutput = '';
 
   $scope.docs = function() {
@@ -26,11 +25,9 @@ angular.module('symathApp.controllers', [])
     };
   };
 
-  $scope.bydloFunc = function() {
-    if($scope.bydloVar)
+  $scope.changeMode = function() {
+    if($scope.inputExpr && $scope.inputExpr != "")
       $scope.calculate();
-    else
-      $scope.bydloVar = true;
   };
 
   $scope.addOutputToInput = function() {
