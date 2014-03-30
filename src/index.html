@@ -45,6 +45,8 @@
   </head>
   <body ng-controller="indexCtrl">
 
+    <input ng-if="nw" id="savefile" type="file" nwsaveas="result.jpeg" accept=".jpeg" app-symath-save />
+
     <ul class="left-menu">
       <li><span></span></li>
       <li ng-click="calculate()" class="important">
@@ -118,7 +120,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </body>
   

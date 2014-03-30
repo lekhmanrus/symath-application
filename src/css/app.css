@@ -218,3 +218,7 @@ ul.left-menu li.important:not(:first-child):hover {
   padding: 0px 25px;
   padding-left: 12px;
 }
+
+input#savefile {
+  display: none;
+}

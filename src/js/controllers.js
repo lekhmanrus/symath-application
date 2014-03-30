@@ -106,22 +106,17 @@ angular.module('symathApp.controllers', [])
     }
   };
   
+  $scope.save = function() {
+    $('input#savefile').val("");
+    console.log("before " + $('input#savefile').val());
+    $('input#savefile').click();
+  };
+
   $scope.clear = function() {
     $scope.showOutputTeX = false;
     $scope.outputTeX = undefined;
     $scope.errorMsg = undefined;
     $scope.inputExpr = '';
-  };
-
-  $scope.save = function() {
-    var gui = require('nw.gui');
-    var win = gui.Window.get();
-    
-    win.capturePage(function(img) {
-      var svg = $('.MathJax_SVG_Display svg');
-      
-      // TODO: export(img, svg.offset().top, svg.offset().left, svg.width(), svg.height())
-    }, { format: 'png', datatype: 'datauri' });
   };
 
   Mousetrap.bind(['enter', 'command+e', 'ctrl+e', '=', 'e'], function() {
